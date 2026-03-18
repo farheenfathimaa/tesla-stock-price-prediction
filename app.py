@@ -76,7 +76,7 @@ if uploaded_file is not None:
         try:
             import tensorflow as tf
             from tensorflow.keras.models import load_model
-            model_path = f"model_{selected_model}_{selected_horizon}d.h5"
+            model_path = f"models/model_{selected_model}_{selected_horizon}d.h5"
             try:
                 # Use compile=False to avoid serialization issues with metrics/optimizers during inference
                 model = load_model(model_path, compile=False)

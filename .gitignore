@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Local Environment
+.env
+.venv/
+env/
+venv/
+
+# Project Specific
+models/
+Project Title.docx
+nb_log.txt
+python_log.txt
+generate_notebook.py
+tesla_stock_prediction.py
