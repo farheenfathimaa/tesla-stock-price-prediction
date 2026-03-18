@@ -78,7 +78,8 @@ if uploaded_file is not None:
             from tensorflow.keras.models import load_model
             model_path = f"model_{selected_model}_{selected_horizon}d.h5"
             try:
-                model = load_model(model_path)
+                # Use compile=False to avoid serialization issues with metrics/optimizers during inference
+                model = load_model(model_path, compile=False)
                 st.success(f"Successfully loaded {model_path}.")
             except OSError:
                 st.error(f"Model file '{model_path}' not found. Please ensure you have run the Jupyter Notebook to train and save the models first.")
